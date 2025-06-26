@@ -1,0 +1,187 @@
+/*
+ * Typography
+ */
+
+:root {
+	/* System font stacks swiped from https://systemfontstack.com/ */
+	--font-family-sans: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+		segoe ui, helvetica neue, Cantarell, Ubuntu, roboto, noto, helvetica, arial,
+		sans-serif;
+	--font-family-serif: Iowan Old Style, Apple Garamond, Baskerville,
+		Times New Roman, Droid Serif, Times, Source Serif Pro, serif,
+		Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+	--font-family-monospace: Menlo, Consolas, Monaco, Liberation Mono,
+		Lucida Console, monospace;
+}
+
+/*
+ * Color
+ */
+
+:root {
+	--color-background: #ffffff;
+	--color-background-muted: #efefef;
+	--color-image-background: #ffffff;
+	--color-active: #007aff;
+	--color-visited: #9000ff;
+	--color-border: #cccccc;
+	--color-text-display: #000000;
+	--color-text-body: #333333;
+}
+
+/*
+ * Global
+ */
+
+* {
+	box-sizing: border-box;
+}
+
+body,
+html {
+	font-family: var(--font-family-serif);
+	color: var(--color-text-body);
+	background: var(--color-background);
+}
+
+/**
+  * 
+  */
+/* TODO: clean up and categorize below? */
+/**
+  * 
+  */
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.instructions-container {
+	width: 100%;
+	max-width: 8.5in;
+}
+
+/* Default to letter page size */
+@page {
+	size: 8.5in 11in;
+	margin: 0;
+}
+
+/* Hide all other elements to print the letter page */
+@media print {
+	.noprint {
+		display: none;
+	}
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+@media print {
+	body {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+/* Page container */
+.page-container {
+	/* width: 100%; */
+	margin: 0 auto;
+	padding: 1rem 1rem 8rem 1rem;
+}
+@media print {
+	.page-container {
+		width: auto;
+		padding: 0;
+	}
+}
+
+/* Style for the letter page */
+.letter-page {
+	position: relative;
+	width: 8.5in;
+	height: 11in;
+	border: 1px solid #ccc;
+}
+@media print {
+	.letter-page {
+		border: none;
+	}
+}
+
+/* Style some dummy content, occupying the full letter page */
+.letter-page-contents {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 0.5in;
+	/* border: 3px solid magenta; */
+}
+
+/* Moveable elements */
+.can-move {
+	cursor: move;
+	user-select: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
+.can-move.selected {
+	outline: 2px solid var(--color-active);
+}
+@media print {
+	.can-move.selected {
+		outline: none;
+	}
+}
+
+.delete-button {
+	cursor: pointer;
+	display: none;
+	font-size: 0.75rem;
+	position: absolute;
+	right: 2px;
+	top: 2px;
+}
+
+.can-move.selected .delete-button {
+	display: block;
+}
+@media print {
+	.can-move.selected .delete-button {
+		display: none;
+	}
+}
+
+/*
+ * File Input
+ */
+
+.file-input-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.file-input {
+	width: 100%;
+	height: 100%;
+	padding: 1rem;
+	border-radius: 8px;
+	background: var(--color-background-muted);
+	cursor: pointer;
+}
+
+.file-input.drag-active {
+	outline: 2px solid var(--color-active);
+}
