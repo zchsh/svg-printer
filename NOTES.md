@@ -2,14 +2,7 @@
 
 ## Next steps
 
-- [ ] Add on-page docs-ish notes about print quirks
-  - This tool is likely easiest to use on a larger screen, such as a tablet or laptop
-  - Printing from certain browsers can be annoying.
-  - Chrome seems to have the most considered approach.
-  - Firefox seems to work pretty well, though I've run into some nitpicky bugs when printing SVGs.
-  - Safari can be frustrating. The print preview sometimes doesn't match the printed document.
-
-## Later
+### Later
 
 - [ ] Implement page size adjustment
   - In theory could rely on browser print... in practice, nice to have a preview
@@ -21,3 +14,14 @@
 - [ ] Implement page size units
   - Start with `inches` most likely, cause that's how paper works where I am...
   - Add `mm` probably, that's it really
+
+## Changelog
+
+### 2025-06-26 at 12:15 - expanded faq section
+
+- [x] Add on-page docs-ish notes about print quirks
+  - This tool is likely easiest to use on a larger screen, such as a tablet or laptop
+  - Printing from certain browsers can be annoying.
+  - Chrome seems to have the most considered approach.
+  - Firefox seems to work pretty well, though I've run into some nitpicky bugs when printing SVGs.
+  - Safari can be frustrating. The print preview sometimes doesn't match the printed document.
