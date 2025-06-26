@@ -3,14 +3,14 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>SVG printer | zch.sh</title>
+		<title>Layout and print SVGs | zch.sh</title>
 		<script type="text/javascript" src="./main.js"></script>
 		<link rel="stylesheet" href="./style.css" />
 	</head>
 	<body>
 		<div class="page-container">
 			<div class="noprint instructions-container">
-				<h1>SVG printer</h1>
+				<h1>Layout and print SVGs</h1>
 				<p>
 					Paste SVGs into the page, reposition them, then print the page. Most
 					browsers will let you save a PDF document from the print dialog, which
@@ -33,14 +33,58 @@
 				<details>
 					<summary>Why does this exist?</summary>
 					<p>
-						I made this tool to work with a
+						Because I'm tired of using complex freemium tools like
+						<a href="https://www.figma.com/">Figma</a> for simple
+						layout-and-print tasks. I wanted something easy and simple that does
+						the layout-and-print part quickly and easily, without requiring an
+						account or prior design software experience.
+					</p>
+					<p>
+						I originally made this tool to work with a
 						<a href="https://paper-mini.zch.sh/">Paper miniature generator</a>
 						that outputs SVGs.
 					</p>
 				</details>
 
 				<details>
-					<summary>Note on SVG identifier conflicts</summary>
+					<summary>Why does my printed document look different?</summary>
+					<p>
+						If you're seeing issues when trying to print, it's likely related to
+						your web browser and browser print settings. A good starting point
+						is to check the following settings:
+					</p>
+					<ul>
+						<li>Margins should be set to "None" or zero.</li>
+						<li>
+							Scale should be set to 100%. Don't use "auto-fit" or similar
+							settings.
+						</li>
+						<li>
+							Background graphics should be enabled. Otherwise, images might not
+							print at all.
+						</li>
+						<li>
+							Page size should be set to "Letter" or "US Letter", which is 8.5in
+							x 11in. This tool currently only works with letter-sized pages.
+							I'd love if you send an email to
+							<a href="mailto:hi@zch.sh">hi@zch.sh</a> if you'd like to print on
+							other page sizes.
+						</li>
+						<li>Print headers and footers should be disabled.</li>
+					</ul>
+					<p>
+						While I usually prefer
+						<a href="https://www.mozilla.org/firefox/">Firefox</a>, I've found
+						that
+						<a href="https://www.google.com/chrome/">Google Chrome</a> seems to
+						have the most reliable print output. Switching between browsers just
+						to print something is annoying, so if one browser isn't working
+						while another is, consider filing a bug report.
+					</p>
+				</details>
+
+				<details>
+					<summary>Why do my SVGs get messed up when I paste them?</summary>
 					<p>
 						If you're pasting different SVGs, you might see strange shapes and
 						images where they shouldn't be. This is a bit technical, but pasted
@@ -50,9 +94,10 @@
 					</p>
 					<p>
 						There's a fix for this, but so far I've been too lazy to implement
-						it... please email me at
-						<a href="mailto:hi@zch.sh">hi@zch.sh</a> if you run into it, then
-						I'll know it's worth the effort.
+						it, because I don't really expect anyone to use this tool except me
+						and maybe a few close friends. If you're seeing weird issues, please
+						email me at
+						<a href="mailto:hi@zch.sh">hi@zch.sh</a>, I'll be happy to help.
 					</p>
 				</details>
 
