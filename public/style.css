@@ -29,6 +29,24 @@
 	--color-text-body: #333333;
 }
 
+/**
+ * Dark mode
+ */
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-background: #1f1f1f;
+		--color-background-muted: #333333;
+		--color-image-background: #ffffff; /* Image backgrounds won't change */
+		--color-active: #3791ff;
+		--color-active-semitransparent: rgba(55, 145, 255, 0.5);
+		--color-visited: #cd76f8;
+		--color-border: #666666;
+		--color-text-display: #ffffff;
+		--color-text-body: #dddddd;
+	}
+}
+
 /*
  * Global
  */
@@ -44,13 +62,48 @@ html {
 	background: var(--color-background);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--color-text-display);
+}
+
+p {
+	line-height: 1.5;
+}
+
+a {
+	color: var(--color-active);
+}
+
+a:visited {
+	color: var(--color-visited);
+}
+
+/*
+ * FAQ
+ */
+
+details > :last-child {
+	padding-bottom: 12px;
+}
+
+details summary {
+	padding-top: 6px;
+	padding-bottom: 6px;
+	cursor: pointer;
+}
+
+details summary:hover {
+	color: var(--color-active);
+}
+
 /**
-  * 
-  */
-/* TODO: clean up and categorize below? */
-/**
-  * 
-  */
+ * Layout
+ */
 
 body {
 	display: flex;
@@ -58,10 +111,25 @@ body {
 	align-items: center;
 }
 
+.page-container {
+	margin: 0 auto;
+	padding: 1rem 1rem 8rem 1rem;
+}
+
+@media print {
+	.page-container {
+		width: auto;
+		padding: 0;
+	}
+}
 .instructions-container {
 	width: 100%;
 	max-width: 8.5in;
 }
+
+/**
+ * Print setup
+ */
 
 /* Default to letter page size */
 @page {
@@ -76,36 +144,12 @@ body {
 	}
 }
 
-body {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-@media print {
-	body {
-		margin: 0;
-		padding: 0;
-	}
-}
-
-/* Page container */
-.page-container {
-	/* width: 100%; */
-	margin: 0 auto;
-	padding: 1rem 1rem 8rem 1rem;
-}
-@media print {
-	.page-container {
-		width: auto;
-		padding: 0;
-	}
-}
-
 /* Style for the letter page */
 .letter-page {
 	position: relative;
 	width: 8.5in;
 	height: 11in;
+	background: var(--color-image-background);
 	border: 1px solid #ccc;
 }
 @media print {

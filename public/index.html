@@ -3,14 +3,14 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Print Letter Page</title>
+		<title>SVG printer | zch.sh</title>
 		<script type="text/javascript" src="./main.js"></script>
 		<link rel="stylesheet" href="./style.css" />
 	</head>
 	<body>
 		<div class="page-container">
 			<div class="noprint instructions-container">
-				<h1>Demo - Paste & print SVGs on a letter page</h1>
+				<h1>SVG printer</h1>
 				<p>
 					Paste SVGs into the page, reposition them, then print the page. Most
 					browsers will let you save a PDF document from the print dialog, which
@@ -29,27 +29,62 @@
 				<button id="paste-button">Paste from clipboard</button>
 				<button onclick="window.print()">Print</button>
 				<h2>FAQ</h2>
-				<p>
-					I made this tool to work with a
-					<a href="https://paper-mini.zch.sh/">Paper miniature generator</a>
-					that outputs SVGs.
-				</p>
+
 				<details>
-					<summary>Caveats and shortcomings</summary>
-					This tool is far from perfect. Please keep in mind the following
-					caveats:
-					<ul>
-						<li>
-							If you're pasting different SVGs, you might see strange shapes and
-							images where they shouldn't be. This is a bit technical, but
-							pasted SVGs all share the same parent document, so any
-							<code>&lt;defs /&gt;</code> or other elements with the same
-							<code>id</code> will cause conflicts. There's a fix for this, but
-							so far I've been too lazy to implement it... please email me at
-							<a href="mailto:hi@zch.sh">hi@zch.sh</a> if you run into it, then
-							I'll know it's worth the effort.
-						</li>
-					</ul>
+					<summary>Why does this exist?</summary>
+					<p>
+						I made this tool to work with a
+						<a href="https://paper-mini.zch.sh/">Paper miniature generator</a>
+						that outputs SVGs.
+					</p>
+				</details>
+
+				<details>
+					<summary>Note on SVG identifier conflicts</summary>
+					<p>
+						If you're pasting different SVGs, you might see strange shapes and
+						images where they shouldn't be. This is a bit technical, but pasted
+						SVGs all share the same parent document, so any
+						<code>&lt;defs /&gt;</code> or other elements with the same
+						<code>id</code> value will cause conflicts.
+					</p>
+					<p>
+						There's a fix for this, but so far I've been too lazy to implement
+						it... please email me at
+						<a href="mailto:hi@zch.sh">hi@zch.sh</a> if you run into it, then
+						I'll know it's worth the effort.
+					</p>
+				</details>
+
+				<details>
+					<summary>How can I support this project?</summary>
+					<p>
+						If you've gotten something out of the couple of hours of work that
+						went into this tool, you can
+						<a href="https://buymeacoffee.com/zchsh">say thanks with money</a>.
+						It'll help me buy food and pay rent.
+					</p>
+					<p>
+						If you'd like to contribute code or feedback, you can do that on
+						GitHub, at
+						<a href="https://github.com/zchsh/svg-printer">zchsh/svg-printer</a
+						>.
+					</p>
+					<p>
+						The spirit of this project is to make a tool that's free, open
+						source, account-less, does one thing really well, and uses file
+						formats that are highly interoperable, so that you can use it in
+						combination with other tools. It's an attempt at taking a
+						<a href="https://en.wikipedia.org/wiki/Unix_philosophy"
+							>Unix-like philosophy</a
+						>
+						to writing code for the web.
+					</p>
+					<p>
+						If you like writing code, I'd love to hear your thoughts, or
+						collaborate on tools with a similar philosophy. You can reach me at
+						<a href="mailto:hi@zch.sh">hi@zch.sh</a>.
+					</p>
 				</details>
 
 				<br />

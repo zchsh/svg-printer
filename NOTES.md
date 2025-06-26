@@ -9,6 +9,8 @@
   - Firefox seems to work pretty well, though I've run into some nitpicky bugs when printing SVGs.
   - Safari can be frustrating. The print preview sometimes doesn't match the printed document.
 
+## Later
+
 - [ ] Implement page size adjustment
   - In theory could rely on browser print... in practice, nice to have a preview
   - Number inputs for width and height
