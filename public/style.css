@@ -89,7 +89,30 @@ a {
 }
 
 a:visited {
-	color: var(--color-visited);
+	color: var(--color-active);
+}
+
+/*
+ * Global classes
+ */
+
+/* GLOBAL: FOOTER */
+
+.g-footer {
+	border-top: 1px solid var(--color-neutral-200);
+	text-align: center;
+	padding: 3rem 1rem 2rem 1rem;
+}
+
+/* GLOBAL: LINKS */
+
+.g-link {
+	text-decoration: none;
+	font-family: var(--font-family-sans);
+}
+
+.g-link-arrow {
+	font-family: var(--font-family-sans);
 }
 
 /*
