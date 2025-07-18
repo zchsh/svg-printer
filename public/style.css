@@ -104,6 +104,12 @@ a:visited {
 	padding: 3rem 1rem 2rem 1rem;
 }
 
+@media print {
+	.g-footer {
+		display: none;
+	}
+}
+
 /* GLOBAL: LINKS */
 
 .g-link {
